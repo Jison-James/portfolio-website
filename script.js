@@ -16,6 +16,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     typeWriter();
+
+    // ✅ Mobile Menu Toggle Logic
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinksMobile = document.getElementById('nav-links');
+
+    if (menuToggle && navLinksMobile) {
+        menuToggle.addEventListener('click', () => {
+            navLinksMobile.classList.toggle('active');
+        });
+    }
+
     
     // Intersection Observer for section animations
     const sections = document.querySelectorAll('section');
